@@ -10,7 +10,7 @@ export default function Article() {
   const article = articles[title];
 
   return article ? (
-    <div className="article-container">
+    <div className="article-container description">
       <h1 className="article-title">{article.title}</h1>
       <p>
         By <Link to={`/authors/${article.author}`}>{article.author}</Link>

@@ -22,7 +22,7 @@ export default function Articles() {
     : Object.values(articles);
 
   return (
-    <main>
+    <main className="description">
       <h1>Articles</h1>
       <ul>
         {filteredArticles.map((article) => (
