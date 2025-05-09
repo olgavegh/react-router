@@ -136,7 +136,7 @@ input {
   font-size: 16px;
   padding: 8px;
   border: 1px solid #979797;
-  border-radius: 3px;
+  border-radius: 999px;
 }
 
 .logout {
@@ -154,5 +154,44 @@ input {
     position: relative;
     left: -3em;
     top: 0;
+  }
+}
+.search-form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  --icon-size: 22px;
+  --icon-padding: 0.5em;
+
+  #icon-box {
+    width: var(--icon-size);
+    height: auto;
+
+    position: absolute;
+    left: var(--icon-padding);
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg,
+    svg:hover {
+      fill: var(--text -color);
+    }
+  }
+  #search-field {
+    font-size: inherit;
+
+    padding: 1em 2em 1em calc(var(--icon-size) + var(--icon-padding) * 2);
+
+    border: 1px solid var(--tech-color);
+    outline: none;
+
+    color: var(--text-color);
+    background: var(--neutral-color);
+
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0, 1, 0.66, 1);
+    &:hover {
+      box-shadow: 0 0 4px 1px var(--primary-color);
+    }
   }
 }
